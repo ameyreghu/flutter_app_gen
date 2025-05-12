@@ -21,7 +21,12 @@ class _FormScreenState extends State<FormScreen> {
   @override
   void initState() {
     super.initState();
-    state = {...widget.screenData.initialState};
+    state = {
+      ...widget.screenData.initialState,
+      "formData": Map<String, dynamic>.from(
+        widget.screenData.initialState["formData"] ?? {},
+      ),
+    };
   }
 
   @override
@@ -75,12 +80,15 @@ class _FormScreenState extends State<FormScreen> {
           decoration: InputDecoration(
             labelText: component.params['label'] ?? '',
           ),
-          items: (component.params['options'] as List)
-              .map((option) => DropdownMenuItem(
-                    value: option['value'],
-                    child: Text(option['label']),
-                  ))
-              .toList(),
+          items:
+              (component.params['options'] as List)
+                  .map(
+                    (option) => DropdownMenuItem(
+                      value: option['value'],
+                      child: Text(option['label']),
+                    ),
+                  )
+                  .toList(),
           onChanged: (value) {
             setState(() {
               state["formData"][component.params['dataKey']] = value;
