@@ -2,18 +2,17 @@ const mock_appDataConfig = {
   "appName": "JDF DEMO APP",
   "appVersion": "1.0.0",
   "themeConfig": {
-    "primaryColor": "#4CAF50", 
+    "primaryColor": "#FFC107",
     "secondaryColor": "#FFC107",
     "backgroundColor": "#F5F5F5",
-    "textColor": "#212121", 
-    "isDarkMode": false,
-    "darkTheme": {
-      "backgroundColor": "#121212", 
-      "textColor": "#E0E0E0",
-    },
+    "textColor": "#212121",
+    "isDarkMode": true,
+    "darkTheme": {"backgroundColor": "#121212", "textColor": "#E0E0E0"},
   },
   "intialRoute": "/home",
-  "routes": ["/home", "/details", "/listing"],
+  "routes": ["/home", "/details", "/listing"
+  , "/test1"
+  ],
   "screens": [
     {
       "title": "Home Screen",
@@ -68,6 +67,7 @@ const mock_appDataConfig = {
             {"title": "Home", "icon": "home", "route": "/home"},
             {"title": "Details", "icon": "info", "route": "/details"},
             {"title": "Listing", "icon": "info", "route": "/listing"},
+           {"title": "Test 1", "icon": "info", "route": "/test1"},
           ],
         },
       },
@@ -173,6 +173,24 @@ const mock_appDataConfig = {
         "method": "GET",
         "dataKey": "data",
       },
+      "drawerConfig": null,
+    }
+    ,
+     {
+      "title": "Test Screen",
+      "key": "test1",
+      "routeName": "/test1",
+      "type": "base",
+      "components": [
+        {
+          "type": "centeredtext",
+          "params": {
+            "content": "This is a Test Screen",
+          },
+        },
+      ],
+      "initialState": {"data": []},
+      "intialAction": { },
       "drawerConfig": null,
     },
   ],

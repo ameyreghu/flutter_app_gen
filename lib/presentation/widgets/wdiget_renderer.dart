@@ -17,6 +17,16 @@ class WidgetRenderer extends StatelessWidget {
             // color: _parseColor(component.params?['color']) ?? Colors.black,
           ),
         );
+      case "centeredtext":
+        return Center(
+          child: Text(
+            component.params?['content'] ?? '',
+            style: TextStyle(
+              fontSize: (component.params?['fontSize'] ?? 16).toDouble(),
+              // color: _parseColor(component.params?['color']) ?? Colors.black,
+            ),
+          ),
+        );
 
       case "image":
         return Image.network(
