@@ -6,9 +6,9 @@ A proof-of-concept Flutter framework that renders entire apps from a single JSON
 
 ## 📸 Screenshots
 
-| Home Screen (Carousel + List) | Form Example | Remote Listing |Theme |
+| Home Screen (Carousel + List) | Form Example | Remote Listing |
 |-------------------------------|---------------|----------------|
-| ![Home](screenshots/home.png) | ![Form](screenshots/form.png) | ![Listing](screenshots/listing.png) |![Light Theme](screenshots/home_light.png) |
+| ![Home](screenshots/home.png) | ![Form](screenshots/form.png) | ![Listing](screenshots/listing.png) |
 
 ---
 
